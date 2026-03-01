@@ -4,6 +4,7 @@ from PIL import Image
 from io import BytesIO
 import numpy as np
 from typing import Any
+import os
 # from scipy.ndimage import center_of_mass, shift
 
 from network.core import NetworkCore
@@ -64,6 +65,6 @@ def predict() -> Any:
         traceback.print_exc()   # vollständiger Stack-Trace in der Konsole
         return jsonify({"error": str(e)}), 400
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port, debug=False)
