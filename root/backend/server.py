@@ -17,14 +17,18 @@ network = NetworkCore.create_network_from_file(28 * 28, "MNIST/network0.csv")
 # frontend/public als statischer Ordner
 app = Flask(__name__, static_folder="../frontend/public", static_url_path="")
 
-def crop_and_resize(arr: NDArray[np.float32], target: int = 28) -> NDArray[np.float32]:
-    """Schneidet leere Ränder weg und skaliert auf target×target."""
+def crop_and_resize(arr: NDArray[np.float32], target: int = 28, padding: int = 2) -> NDArray[np.float32]:
     rows = np.any(arr > 0.05, axis=1)
     cols = np.any(arr > 0.05, axis=0)
     if not rows.any():
-        return arr  # leeres Bild – nichts tun
+        return arr
     rmin, rmax = np.where(rows)[0][[0, -1]]
     cmin, cmax = np.where(cols)[0][[0, -1]]
+    # Padding hinzufügen wie in MNIST
+    rmin = max(0, rmin - padding)
+    rmax = min(arr.shape[0] - 1, rmax + padding)
+    cmin = max(0, cmin - padding)
+    cmax = min(arr.shape[1] - 1, cmax + padding)
     cropped = arr[rmin:rmax+1, cmin:cmax+1]
     img = Image.fromarray((cropped * 255).astype(np.uint8))
     img = img.resize((target, target), Image.Resampling.LANCZOS)
