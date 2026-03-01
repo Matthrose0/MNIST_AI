@@ -73,8 +73,8 @@ def predict() -> Any:
         normalized = gaussian_filter(normalized, sigma=0.5) # leicht glätten # type: ignore
         normalized = np.clip(normalized, 0.0, 1.0)          # Werte im gültigen Bereich halten  # type: ignore
 
-        flat = normalized.flatten().reshape(1, -1)           # shape (1, 784)
-        # flat = normalized.flatten()          # shape (784,)
+        # flat = normalized.flatten().reshape(1, -1)           # shape (1, 784)
+        flat = normalized.flatten()          # shape (784,)
 
         # ── Image output for debug ────────────────────────────────────────────
         # print(normalized)
