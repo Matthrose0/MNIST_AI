@@ -5,7 +5,8 @@ from io import BytesIO
 import numpy as np
 from typing import Any
 import os
-# from scipy.ndimage import center_of_mass, shift
+from numpy.typing import NDArray
+from scipy.ndimage import center_of_mass, shift, gaussian_filter
 
 from network.core import NetworkCore
 
@@ -15,6 +16,29 @@ network = NetworkCore.create_network_from_file(28 * 28, "MNIST/network0.csv")
 
 # frontend/public als statischer Ordner
 app = Flask(__name__, static_folder="../frontend/public", static_url_path="")
+
+def crop_and_resize(arr: NDArray[np.float32], target: int = 28) -> NDArray[np.float32]:
+    """Schneidet leere Ränder weg und skaliert auf target×target."""
+    rows = np.any(arr > 0.05, axis=1)
+    cols = np.any(arr > 0.05, axis=0)
+    if not rows.any():
+        return arr  # leeres Bild – nichts tun
+    rmin, rmax = np.where(rows)[0][[0, -1]]
+    cmin, cmax = np.where(cols)[0][[0, -1]]
+    cropped = arr[rmin:rmax+1, cmin:cmax+1]
+    img = Image.fromarray((cropped * 255).astype(np.uint8))
+    img = img.resize((target, target), Image.Resampling.LANCZOS)
+    return np.array(img, dtype=np.float32) / 255.0
+
+
+def center_image(arr: NDArray[np.float32]) -> NDArray[np.float32]:
+    """Verschiebt das Bild so, dass der Schwerpunkt in der Mitte liegt."""
+    cy, cx = center_of_mass(arr)
+    rows, cols = arr.shape
+    shift_y = rows / 2 - cy # type: ignore
+    shift_x = cols / 2 - cx # type: ignore
+    return shift(arr, [shift_y, shift_x], cval=0.0) # type: ignore
+
 
 @app.route("/")
 def index() -> Any:
@@ -39,13 +63,21 @@ def predict() -> Any:
         # Numpy-Array: uint8 [0..255], weiß = 255, schwarz = 0
         arr = np.array(gray, dtype=np.float32)
 
+
         # Invertieren (MNIST-Konvention: 0 = Hintergrund, 1 = Strich)
-        # und auf [0.0, 1.0] normalisieren
         normalized = (255.0 - arr) / 255.0   # shape (28, 28)
-        flat = normalized.flatten()          # shape (784,)
+
+        # ── Vorverarbeitung ───────────────────────────────────────────────────
+        normalized = crop_and_resize(normalized)             # eng um den Strich croppen
+        normalized = center_image(normalized)                # Schwerpunkt in die Mitte
+        normalized = gaussian_filter(normalized, sigma=0.5) # leicht glätten # type: ignore
+        normalized = np.clip(normalized, 0.0, 1.0)          # Werte im gültigen Bereich halten  # type: ignore
+
+        flat = normalized.flatten().reshape(1, -1)           # shape (1, 784)
+        # flat = normalized.flatten()          # shape (784,)
 
         # ── Image output for debug ────────────────────────────────────────────
-        print(normalized)
+        # print(normalized)
         # import matplotlib.pyplot as plt
         # plt.imshow(arr, cmap="gray") # type: ignore
         # plt.show() # type: ignore
