@@ -1,0 +1,72 @@
+1. Aktivierungen notwendig:
+- geringere Genauigkeit (nur 91.35%), somit 6,48% schlechter als ReLU mit gleicher Architektur der hidden layers (128, 64)
+- geringe Trainingsgenauigkeit (unter 95%) -> fundamentale Limitierung, kann selbst trainingsdaten nicht vollständig lernen
+- hohe Abweichung bei visuell komplexen Zahlen siehe Bsp. eine eigentliche 5 wird häufig als 3 oder 8 erkannt
+-> nichtlinearität zwingend notwendig um komplexe Muster zu Lernraten
+-> Tiefe bringt kein Mehrwert, da keine Nichtlinearität/ verändert sich nicht viel
+
+
+2. Performance:
+- LeakyReLU führt mit 97.19% (±1.20%), gefolgt von ReLU 97.15% (±1.23%) 
+=> Unterschied von nur 0.04 % = vernachlässigbar
+
+- ELU höchste Standardabweichung 96.99% (±1.39%)
+=> inkonsistentes Verhalten je nach Konfiguration (besser bei größeren/tieferen)
+
+- Tanh schlechtestes (0.25%schlechter als ELU und sogar zu 0.45% hinter LReLU)
+
+=> absolute Performance Unterschiede minimal
+- baseline wird konstant übertroffen (deep/wide) -> Skalierungspotential
+
+beste 3: 
+- Auffällig ELU 2 mal vertreten + ELU Deep niedrigste Standardabweichung mit 98.06% (±0.05%)
+- wide dominiert, liegt an: wesentlich mehr Neuronen im vergleich zu anderen
+
+3. Lernratenschwankung (0.01 stat 0.001):
+- Tanh, ELU verlieren mehr als doppeltsoviel Genauigkeit wie LReLU
+- std bei ReLU massiv angestiegen von ±0.09% -> ±0.35%
+- Loss werte zeigen unstimmigkeit: LReLU höchster bei höchster trainings_acc warum?
+
+- LReLU verhindert tote neuronen -> ReLU sehr empfindlich, LReLU nich
+- Tanh bei Extremen Werten -> Vanishing Gradients (durch hohe LR verstärkt)
+-> LReLU ohne Hyperparameter-Tuning/ angepasste Werte vorteilhafter
+
+4. Konvergenz:
+- Alle Funktionen erreichen über 97% bereits nach ca 30% Trainingszeit -> entspricht großteil der Endperformance
+-> baseline war überlernt (auch an zu hoher train Acc gesehen)
+-> kein messbacher Einfluss bei MNIST
+- Langzeittraining:
+    = minimale verbesserungen (Tanh sogar verschlechterung)
+    Tanh/ ELU std angestiegen
+    - KEIN systematisches overfitting, warum aber bei baseline?
+    -> Training über 100 Epochen hinaus ineffizient
+
+5. small dataset
+- Overfitting überall
+- Train-Test Unterschied ReLU, LReLU nahezu identisch mit 5.64und 5.61%
+- ELU schlechtestes -> Generalisierungsproblem
+=> ReLU,LReLU für Datenlimitierte Szenarien geeignet, ELU durch zu starke überanpassung nicht
+   + Regulariesierung mit eyrly dropout,... essentiell
+
+6. Architekturabhängigkeit der Performance
+- ELU bei mehr Parameternetzen (Deep/Wide) besser:98.06% (±0.05%) bei Deep
+    -> profitiert am stärksten von Tiefe / Gutes Optimierungspotential bei bestimmter Struktur (Tiefe)
+- LReLU skaliert besser mit breite als mit tiefe (bestes ergebnis)
+- ReLU durchgängig ähnlich -> robust aber geringer Gewinn
+- Tanh erreicht als einzigste keine perfekte train genauigkeit => Gradient flow Problem
+=> Architektur von Aktivierugnsfunktion beeinflusst/bzw. andersherum
+    tiefe = ELU; breite = LReLU; standard = ReLU
+
+7. Overfitting
+- ELU ziemlich niedrig, da bei spezialfällen schon 100% Acc war und nicht höher ging auch wenn die Werte schlechter werden
+- ReLU am besten 2.73% Avg Overfit
+- minimale Unterschiede
+- kein stärkeres Overfit trotz Deep/Wide = mehr Parameter
+=> zu geringe Unterschiede für Aussage
+
+8. Trainingsgeschw. 
+- ReLU schnellstes -> erklärung für am meisten verwendetes
+- ELU durch Exponentialrechnung langsamer
+-> Zeiteffizienz wichtiger als minimalste performance gewinne
+
+

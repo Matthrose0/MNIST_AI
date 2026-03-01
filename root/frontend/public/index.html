@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zahlenerkennung</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="index">
+    <header>
+      <h1>Zahlenerkennung</h1>
+      <nav>
+        <a href="index.html" data-nav="index">Erkennung</a>
+        <a href="model.html" data-nav="model">Modell erstellen</a>
+        <a href="stats.html" data-nav="stats">Statistik</a>
+      </nav>
+    </header>
+
+    <div class="container flex-row">
+      <div class="panel">
+        <h2>Eingabe</h2>
+        <div class="canvas-wrapper">
+          <canvas id="drawing-canvas"></canvas>
+        </div>
+        <br />
+        <input id="brush-size" type="range" min="1" max="40" value="10" />
+        <span id="brush-label">10 px</span>
+        <br />
+        <button id="predict-btn">Vorhersage</button>
+        <button id="clear-btn">Löschen</button>
+        <select id="model-select">
+          <option>Modell A</option>
+          <option>Modell B</option>
+        </select>
+      </div>
+
+      <div class="panel">
+        <h2>Ergebnis</h2>
+        <p><strong>Vorhergesagte Zahl:</strong> <span id="predicted-digit">-</span></p>
+        <div id="bar-chart">[Balkendiagramm Platzhalter]</div>
+        <div id="heatmap">[Heatmap Platzhalter]</div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1232 @@
+======================================================================
+ NEURAL NETWORK - ACTIVATION FUNCTION ANALYSIS
+======================================================================
+
+Loading MNIST data...
+  Full training set: (30000, 784)
+  Reduced training set: (5000, 784)
+  Test set: (10000, 784)
+
+no_activation:
+  Baseline without activation functions
+  Architecture: [128, 64]
+  LR: 0.001,  Epochs: 100
+[Baseline] Standard hyperparameters
+
+Baseline:
+  Standard hyperparameters
+  Architecture: [128, 64]
+  LR: 0.001,   Epochs: 100
+[High_LR] Fast learning, learning rate sensitivity
+
+High_LR:
+  Fast learning, learning rate sensitivity
+  Architecture: [128, 64]
+  LR: 0.01,   Epochs: 100
+[Fast_Convergence] Few epochs - convergence speed
+
+Fast_Convergence:
+  Few epochs - convergence speed
+  Architecture: [128, 64]
+  LR: 0.001,   Epochs: 30
+[Long_Training] Many epochs - overfitting
+
+Long_Training:
+  Many epochs - overfitting
+  Architecture: [128, 64]
+  LR: 0.001,   Epochs: 400
+[Small_Dataset] Reduced training data - overfitting test
+
+Small_Dataset:
+  Reduced training data - overfitting test
+  Architecture: [128, 64]
+  LR: 0.001,   Epochs: 100
+[Deep_Network] Deep architecture - gradient flow
+
+Deep_Network:
+  Deep architecture - gradient flow
+  Architecture: [256, 128, 128, 128, 64]
+  LR: 0.001,   Epochs: 100
+[Wide_Network] Wide architecture
+
+Wide_Network:
+  Wide architecture
+  Architecture: [1024]
+  LR: 0.001,   Epochs: 100
+
+Total configurations: 29
+Experiment groups: 8
+
+Total experiments: 29 configs × 5 runs = 145
+This will take some time...
+Estimated Time (1 Run=500s): 20:08:20 
+
+
+======================================================================
+Experiment 1/29: no_activation
+  Config: linear_baseline_shallow
+
+linear_baseline_shallow:
+  Architecture from hidden layers: [128, 64]
+  Activation: Linear
+    Run 1...
+      Epoch 0/100 - Loss: 2.7783 - Time: 0.27s
+      Epoch 10/100 - Loss: 1.1996 - Time: 10.63s
+      Epoch 20/100 - Loss: 0.6087 - Time: 20.76s
+      Epoch 30/100 - Loss: 0.4395 - Time: 30.88s
+      Epoch 40/100 - Loss: 0.3753 - Time: 41.18s
+      Epoch 50/100 - Loss: 0.3389 - Time: 51.38s
+      Epoch 60/100 - Loss: 0.3166 - Time: 61.61s
+      Epoch 70/100 - Loss: 0.3013 - Time: 71.69s
+      Epoch 80/100 - Loss: 0.2901 - Time: 81.82s
+      Epoch 90/100 - Loss: 0.2812 - Time: 92.12s
+    Run 1 Acc: 91.80%, Time: 102.2s
+    Run 2...
+      Epoch 0/100 - Loss: 2.5843 - Time: 0.25s
+      Epoch 10/100 - Loss: 1.1407 - Time: 10.37s
+      Epoch 20/100 - Loss: 0.5756 - Time: 20.61s
+      Epoch 30/100 - Loss: 0.4178 - Time: 30.97s
+      Epoch 40/100 - Loss: 0.3561 - Time: 42.05s
+      Epoch 50/100 - Loss: 0.3236 - Time: 52.66s
+      Epoch 60/100 - Loss: 0.3033 - Time: 62.88s
+      Epoch 70/100 - Loss: 0.2895 - Time: 73.47s
+      Epoch 80/100 - Loss: 0.2793 - Time: 83.89s
+      Epoch 90/100 - Loss: 0.2713 - Time: 94.05s
+    Run 2 Acc: 91.81%, Time: 103.9s
+    Run 3...
+      Epoch 0/100 - Loss: 2.5179 - Time: 0.27s
+      Epoch 10/100 - Loss: 1.0220 - Time: 10.50s
+      Epoch 20/100 - Loss: 0.5383 - Time: 20.56s
+      Epoch 30/100 - Loss: 0.4072 - Time: 30.65s
+      Epoch 40/100 - Loss: 0.3532 - Time: 40.82s
+      Epoch 50/100 - Loss: 0.3219 - Time: 50.87s
+      Epoch 60/100 - Loss: 0.3020 - Time: 61.16s
+      Epoch 70/100 - Loss: 0.2886 - Time: 71.39s
+      Epoch 80/100 - Loss: 0.2788 - Time: 81.53s
+      Epoch 90/100 - Loss: 0.2708 - Time: 91.57s
+    Run 3 Acc: 91.77%, Time: 101.3s
+    Run 4...
+      Epoch 0/100 - Loss: 2.7126 - Time: 0.26s
+      Epoch 10/100 - Loss: 1.1575 - Time: 10.28s
+      Epoch 20/100 - Loss: 0.5883 - Time: 20.35s
+      Epoch 30/100 - Loss: 0.4347 - Time: 30.51s
+      Epoch 40/100 - Loss: 0.3719 - Time: 40.63s
+      Epoch 50/100 - Loss: 0.3357 - Time: 50.77s
+      Epoch 60/100 - Loss: 0.3132 - Time: 60.81s
+      Epoch 70/100 - Loss: 0.2981 - Time: 70.80s
+      Epoch 80/100 - Loss: 0.2870 - Time: 80.83s
+      Epoch 90/100 - Loss: 0.2784 - Time: 90.82s
+    Run 4 Acc: 91.81%, Time: 100.5s
+    Run 5...
+      Epoch 0/100 - Loss: 2.7148 - Time: 0.26s
+      Epoch 10/100 - Loss: 1.1713 - Time: 10.31s
+      Epoch 20/100 - Loss: 0.5955 - Time: 20.33s
+      Epoch 30/100 - Loss: 0.4359 - Time: 30.32s
+      Epoch 40/100 - Loss: 0.3720 - Time: 40.38s
+      Epoch 50/100 - Loss: 0.3366 - Time: 50.43s
+      Epoch 60/100 - Loss: 0.3140 - Time: 60.49s
+      Epoch 70/100 - Loss: 0.2985 - Time: 70.55s
+      Epoch 80/100 - Loss: 0.2871 - Time: 80.59s
+      Epoch 90/100 - Loss: 0.2783 - Time: 90.62s
+    Run 5 Acc: 92.10%, Time: 100.4s
+
+======================================================================
+Experiment 2/29: Baseline
+  Config: baseline_ReLU
+
+baseline_ReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ReLU
+    Run 1...
+      Epoch 0/100 - Loss: 2.4201 - Time: 0.28s
+      Epoch 10/100 - Loss: 1.6705 - Time: 10.93s
+      Epoch 20/100 - Loss: 0.8002 - Time: 21.53s
+      Epoch 30/100 - Loss: 0.4567 - Time: 32.05s
+      Epoch 40/100 - Loss: 0.3437 - Time: 42.64s
+      Epoch 50/100 - Loss: 0.2817 - Time: 53.80s
+      Epoch 60/100 - Loss: 0.2412 - Time: 64.27s
+      Epoch 70/100 - Loss: 0.2095 - Time: 74.77s
+      Epoch 80/100 - Loss: 0.1833 - Time: 85.28s
+      Epoch 90/100 - Loss: 0.1610 - Time: 95.76s
+    Run 1 Acc: 94.88%, Time: 106.0s
+    Run 2...
+      Epoch 0/100 - Loss: 2.3876 - Time: 0.28s
+      Epoch 10/100 - Loss: 1.6486 - Time: 10.83s
+      Epoch 20/100 - Loss: 0.7949 - Time: 21.38s
+      Epoch 30/100 - Loss: 0.4410 - Time: 31.83s
+      Epoch 40/100 - Loss: 0.3302 - Time: 42.29s
+      Epoch 50/100 - Loss: 0.2736 - Time: 52.74s
+      Epoch 60/100 - Loss: 0.2360 - Time: 63.14s
+      Epoch 70/100 - Loss: 0.2076 - Time: 73.63s
+      Epoch 80/100 - Loss: 0.1845 - Time: 84.05s
+      Epoch 90/100 - Loss: 0.1650 - Time: 94.56s
+    Run 2 Acc: 94.95%, Time: 104.7s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3069 - Time: 0.29s
+      Epoch 10/100 - Loss: 1.5333 - Time: 10.86s
+      Epoch 20/100 - Loss: 0.7209 - Time: 21.44s
+      Epoch 30/100 - Loss: 0.4223 - Time: 32.02s
+      Epoch 40/100 - Loss: 0.3219 - Time: 42.52s
+      Epoch 50/100 - Loss: 0.2652 - Time: 52.95s
+      Epoch 60/100 - Loss: 0.2264 - Time: 63.53s
+      Epoch 70/100 - Loss: 0.1977 - Time: 74.06s
+      Epoch 80/100 - Loss: 0.1744 - Time: 84.62s
+      Epoch 90/100 - Loss: 0.1548 - Time: 95.11s
+    Run 3 Acc: 94.77%, Time: 105.3s
+    Run 4...
+      Epoch 0/100 - Loss: 2.3532 - Time: 0.27s
+      Epoch 10/100 - Loss: 1.6048 - Time: 10.83s
+      Epoch 20/100 - Loss: 0.7891 - Time: 21.30s
+      Epoch 30/100 - Loss: 0.4497 - Time: 31.85s
+      Epoch 40/100 - Loss: 0.3343 - Time: 42.31s
+      Epoch 50/100 - Loss: 0.2747 - Time: 52.85s
+      Epoch 60/100 - Loss: 0.2355 - Time: 63.31s
+      Epoch 70/100 - Loss: 0.2059 - Time: 73.83s
+      Epoch 80/100 - Loss: 0.1816 - Time: 84.25s
+      Epoch 90/100 - Loss: 0.1608 - Time: 94.79s
+    Run 4 Acc: 94.93%, Time: 105.0s
+    Run 5...
+      Epoch 0/100 - Loss: 2.4231 - Time: 0.28s
+      Epoch 10/100 - Loss: 1.7394 - Time: 10.81s
+      Epoch 20/100 - Loss: 0.8397 - Time: 21.38s
+      Epoch 30/100 - Loss: 0.4564 - Time: 31.80s
+      Epoch 40/100 - Loss: 0.3412 - Time: 42.31s
+      Epoch 50/100 - Loss: 0.2816 - Time: 52.69s
+      Epoch 60/100 - Loss: 0.2429 - Time: 63.26s
+      Epoch 70/100 - Loss: 0.2131 - Time: 73.66s
+      Epoch 80/100 - Loss: 0.1886 - Time: 84.17s
+      Epoch 90/100 - Loss: 0.1676 - Time: 94.65s
+    Run 5 Acc: 95.04%, Time: 104.8s
+
+======================================================================
+Experiment 3/29: Baseline
+  Config: baseline_LeakyReLU
+
+baseline_LeakyReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: LeakyReLU
+    Run 1...
+      Epoch 0/100 - Loss: 2.4217 - Time: 0.30s
+      Epoch 10/100 - Loss: 1.6680 - Time: 11.61s
+      Epoch 20/100 - Loss: 0.7973 - Time: 22.77s
+      Epoch 30/100 - Loss: 0.4578 - Time: 33.91s
+      Epoch 40/100 - Loss: 0.3466 - Time: 44.99s
+      Epoch 50/100 - Loss: 0.2854 - Time: 56.05s
+      Epoch 60/100 - Loss: 0.2461 - Time: 67.09s
+      Epoch 70/100 - Loss: 0.2155 - Time: 78.22s
+      Epoch 80/100 - Loss: 0.1900 - Time: 89.37s
+      Epoch 90/100 - Loss: 0.1678 - Time: 100.57s
+    Run 1 Acc: 94.86%, Time: 111.4s
+    Run 2...
+      Epoch 0/100 - Loss: 2.3874 - Time: 0.31s
+      Epoch 10/100 - Loss: 1.6443 - Time: 11.70s
+      Epoch 20/100 - Loss: 0.7901 - Time: 23.06s
+      Epoch 30/100 - Loss: 0.4402 - Time: 34.34s
+      Epoch 40/100 - Loss: 0.3305 - Time: 45.49s
+      Epoch 50/100 - Loss: 0.2742 - Time: 56.67s
+      Epoch 60/100 - Loss: 0.2370 - Time: 67.87s
+      Epoch 70/100 - Loss: 0.2088 - Time: 79.06s
+      Epoch 80/100 - Loss: 0.1857 - Time: 90.21s
+      Epoch 90/100 - Loss: 0.1663 - Time: 101.33s
+    Run 2 Acc: 94.89%, Time: 112.1s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3061 - Time: 0.31s
+      Epoch 10/100 - Loss: 1.5283 - Time: 11.76s
+      Epoch 20/100 - Loss: 0.7178 - Time: 23.10s
+      Epoch 30/100 - Loss: 0.4216 - Time: 34.42s
+      Epoch 40/100 - Loss: 0.3224 - Time: 45.65s
+      Epoch 50/100 - Loss: 0.2662 - Time: 56.85s
+      Epoch 60/100 - Loss: 0.2278 - Time: 68.10s
+      Epoch 70/100 - Loss: 0.1992 - Time: 79.47s
+      Epoch 80/100 - Loss: 0.1756 - Time: 90.83s
+      Epoch 90/100 - Loss: 0.1556 - Time: 102.23s
+    Run 3 Acc: 94.86%, Time: 113.2s
+    Run 4...
+      Epoch 0/100 - Loss: 2.3544 - Time: 0.34s
+      Epoch 10/100 - Loss: 1.6012 - Time: 12.02s
+      Epoch 20/100 - Loss: 0.7864 - Time: 23.51s
+      Epoch 30/100 - Loss: 0.4505 - Time: 34.95s
+      Epoch 40/100 - Loss: 0.3358 - Time: 46.37s
+      Epoch 50/100 - Loss: 0.2765 - Time: 57.67s
+      Epoch 60/100 - Loss: 0.2370 - Time: 68.94s
+      Epoch 70/100 - Loss: 0.2071 - Time: 80.27s
+      Epoch 80/100 - Loss: 0.1826 - Time: 92.02s
+      Epoch 90/100 - Loss: 0.1616 - Time: 102.94s
+    Run 4 Acc: 94.97%, Time: 113.5s
+    Run 5...
+      Epoch 0/100 - Loss: 2.4241 - Time: 0.31s
+      Epoch 10/100 - Loss: 1.7355 - Time: 11.48s
+      Epoch 20/100 - Loss: 0.8354 - Time: 22.56s
+      Epoch 30/100 - Loss: 0.4551 - Time: 33.53s
+      Epoch 40/100 - Loss: 0.3411 - Time: 44.49s
+      Epoch 50/100 - Loss: 0.2822 - Time: 55.36s
+      Epoch 60/100 - Loss: 0.2440 - Time: 66.25s
+      Epoch 70/100 - Loss: 0.2148 - Time: 77.18s
+      Epoch 80/100 - Loss: 0.1907 - Time: 88.16s
+      Epoch 90/100 - Loss: 0.1699 - Time: 99.21s
+    Run 5 Acc: 94.98%, Time: 109.9s
+
+======================================================================
+Experiment 4/29: Baseline
+  Config: baseline_ELU
+
+baseline_ELU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ELU
+    Run 1...
+      Epoch 0/100 - Loss: 2.5360 - Time: 0.38s
+      Epoch 10/100 - Loss: 1.3923 - Time: 13.42s
+      Epoch 20/100 - Loss: 0.6805 - Time: 26.42s
+      Epoch 30/100 - Loss: 0.4473 - Time: 39.26s
+      Epoch 40/100 - Loss: 0.3616 - Time: 52.08s
+      Epoch 50/100 - Loss: 0.3144 - Time: 64.87s
+      Epoch 60/100 - Loss: 0.2841 - Time: 77.59s
+      Epoch 70/100 - Loss: 0.2617 - Time: 90.32s
+      Epoch 80/100 - Loss: 0.2434 - Time: 103.09s
+      Epoch 90/100 - Loss: 0.2272 - Time: 115.90s
+    Run 1 Acc: 93.29%, Time: 128.2s
+    Run 2...
+      Epoch 0/100 - Loss: 2.4339 - Time: 0.38s
+      Epoch 10/100 - Loss: 1.3160 - Time: 13.60s
+      Epoch 20/100 - Loss: 0.6448 - Time: 26.75s
+      Epoch 30/100 - Loss: 0.4203 - Time: 39.83s
+      Epoch 40/100 - Loss: 0.3377 - Time: 52.80s
+      Epoch 50/100 - Loss: 0.2939 - Time: 65.60s
+      Epoch 60/100 - Loss: 0.2647 - Time: 78.48s
+      Epoch 70/100 - Loss: 0.2427 - Time: 91.35s
+      Epoch 80/100 - Loss: 0.2242 - Time: 104.23s
+      Epoch 90/100 - Loss: 0.2078 - Time: 117.12s
+    Run 2 Acc: 93.78%, Time: 129.5s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3189 - Time: 0.42s
+      Epoch 10/100 - Loss: 1.1940 - Time: 13.58s
+      Epoch 20/100 - Loss: 0.6013 - Time: 26.69s
+      Epoch 30/100 - Loss: 0.4119 - Time: 39.68s
+      Epoch 40/100 - Loss: 0.3344 - Time: 52.50s
+      Epoch 50/100 - Loss: 0.2903 - Time: 65.34s
+      Epoch 60/100 - Loss: 0.2601 - Time: 78.17s
+      Epoch 70/100 - Loss: 0.2371 - Time: 91.01s
+      Epoch 80/100 - Loss: 0.2178 - Time: 103.92s
+      Epoch 90/100 - Loss: 0.2007 - Time: 116.78s
+    Run 3 Acc: 93.78%, Time: 129.2s
+    Run 4...
+      Epoch 0/100 - Loss: 2.4688 - Time: 0.39s
+      Epoch 10/100 - Loss: 1.3321 - Time: 13.64s
+      Epoch 20/100 - Loss: 0.6700 - Time: 26.84s
+      Epoch 30/100 - Loss: 0.4410 - Time: 39.77s
+      Epoch 40/100 - Loss: 0.3523 - Time: 52.59s
+      Epoch 50/100 - Loss: 0.3034 - Time: 65.35s
+      Epoch 60/100 - Loss: 0.2708 - Time: 78.13s
+      Epoch 70/100 - Loss: 0.2465 - Time: 91.02s
+      Epoch 80/100 - Loss: 0.2268 - Time: 103.85s
+      Epoch 90/100 - Loss: 0.2096 - Time: 116.65s
+    Run 4 Acc: 93.82%, Time: 129.0s
+    Run 5...
+      Epoch 0/100 - Loss: 2.5154 - Time: 0.42s
+      Epoch 10/100 - Loss: 1.3820 - Time: 13.66s
+      Epoch 20/100 - Loss: 0.6876 - Time: 26.77s
+      Epoch 30/100 - Loss: 0.4473 - Time: 39.69s
+      Epoch 40/100 - Loss: 0.3562 - Time: 52.59s
+      Epoch 50/100 - Loss: 0.3086 - Time: 65.43s
+      Epoch 60/100 - Loss: 0.2777 - Time: 78.41s
+      Epoch 70/100 - Loss: 0.2545 - Time: 91.28s
+      Epoch 80/100 - Loss: 0.2355 - Time: 104.13s
+      Epoch 90/100 - Loss: 0.2186 - Time: 116.99s
+    Run 5 Acc: 93.68%, Time: 129.3s
+
+======================================================================
+Experiment 5/29: Baseline
+  Config: baseline_Tanh
+
+baseline_Tanh:
+  Architecture from hidden layers: [128, 64]
+  Activation: Tanh
+    Run 1...
+      Epoch 0/100 - Loss: 2.4046 - Time: 0.51s
+      Epoch 10/100 - Loss: 1.5243 - Time: 13.59s
+      Epoch 20/100 - Loss: 0.9130 - Time: 26.63s
+      Epoch 30/100 - Loss: 0.6153 - Time: 39.67s
+      Epoch 40/100 - Loss: 0.4639 - Time: 52.67s
+      Epoch 50/100 - Loss: 0.3802 - Time: 65.77s
+      Epoch 60/100 - Loss: 0.3282 - Time: 78.88s
+      Epoch 70/100 - Loss: 0.2919 - Time: 91.92s
+      Epoch 80/100 - Loss: 0.2641 - Time: 105.01s
+      Epoch 90/100 - Loss: 0.2415 - Time: 118.09s
+    Run 1 Acc: 93.08%, Time: 130.7s
+    Run 2...
+      Epoch 0/100 - Loss: 2.3884 - Time: 0.48s
+      Epoch 10/100 - Loss: 1.5004 - Time: 12.88s
+      Epoch 20/100 - Loss: 0.8829 - Time: 25.44s
+      Epoch 30/100 - Loss: 0.5863 - Time: 37.96s
+      Epoch 40/100 - Loss: 0.4369 - Time: 50.45s
+      Epoch 50/100 - Loss: 0.3569 - Time: 63.10s
+      Epoch 60/100 - Loss: 0.3089 - Time: 75.61s
+      Epoch 70/100 - Loss: 0.2757 - Time: 88.17s
+      Epoch 80/100 - Loss: 0.2503 - Time: 100.73s
+      Epoch 90/100 - Loss: 0.2295 - Time: 113.31s
+    Run 2 Acc: 93.36%, Time: 125.4s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3316 - Time: 0.45s
+      Epoch 10/100 - Loss: 1.3932 - Time: 13.48s
+      Epoch 20/100 - Loss: 0.8163 - Time: 26.52s
+      Epoch 30/100 - Loss: 0.5579 - Time: 39.55s
+      Epoch 40/100 - Loss: 0.4255 - Time: 52.68s
+      Epoch 50/100 - Loss: 0.3514 - Time: 65.71s
+      Epoch 60/100 - Loss: 0.3050 - Time: 78.75s
+      Epoch 70/100 - Loss: 0.2721 - Time: 91.77s
+      Epoch 80/100 - Loss: 0.2467 - Time: 104.84s
+      Epoch 90/100 - Loss: 0.2257 - Time: 117.94s
+    Run 3 Acc: 93.39%, Time: 130.5s
+    Run 4...
+      Epoch 0/100 - Loss: 2.4334 - Time: 0.51s
+      Epoch 10/100 - Loss: 1.5300 - Time: 13.67s
+      Epoch 20/100 - Loss: 0.9182 - Time: 26.79s
+      Epoch 30/100 - Loss: 0.6196 - Time: 40.07s
+      Epoch 40/100 - Loss: 0.4647 - Time: 53.20s
+      Epoch 50/100 - Loss: 0.3788 - Time: 66.25s
+      Epoch 60/100 - Loss: 0.3262 - Time: 79.29s
+      Epoch 70/100 - Loss: 0.2898 - Time: 92.41s
+      Epoch 80/100 - Loss: 0.2622 - Time: 105.49s
+      Epoch 90/100 - Loss: 0.2398 - Time: 118.51s
+    Run 4 Acc: 93.25%, Time: 131.0s
+    Run 5...
+      Epoch 0/100 - Loss: 2.4309 - Time: 0.48s
+      Epoch 10/100 - Loss: 1.5193 - Time: 13.48s
+      Epoch 20/100 - Loss: 0.9194 - Time: 26.59s
+      Epoch 30/100 - Loss: 0.6266 - Time: 39.61s
+      Epoch 40/100 - Loss: 0.4688 - Time: 52.64s
+      Epoch 50/100 - Loss: 0.3800 - Time: 65.64s
+      Epoch 60/100 - Loss: 0.3257 - Time: 78.70s
+      Epoch 70/100 - Loss: 0.2880 - Time: 91.82s
+      Epoch 80/100 - Loss: 0.2595 - Time: 104.83s
+      Epoch 90/100 - Loss: 0.2366 - Time: 117.94s
+    Run 5 Acc: 93.40%, Time: 130.7s
+
+======================================================================
+Experiment 6/29: High_LR
+  Config: high_lr_ReLU
+
+high_lr_ReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ReLU
+    Run 1...
+      Epoch 0/100 - Loss: 2.4201 - Time: 0.31s
+      Epoch 10/100 - Loss: 0.5721 - Time: 11.19s
+      Epoch 20/100 - Loss: 0.3116 - Time: 22.15s
+      Epoch 30/100 - Loss: 0.2051 - Time: 33.05s
+      Epoch 40/100 - Loss: 0.1400 - Time: 43.93s
+      Epoch 50/100 - Loss: 0.0997 - Time: 54.80s
+      Epoch 60/100 - Loss: 0.0726 - Time: 65.67s
+      Epoch 70/100 - Loss: 0.0526 - Time: 76.66s
+      Epoch 80/100 - Loss: 0.0375 - Time: 87.53s
+      Epoch 90/100 - Loss: 0.0265 - Time: 98.41s
+    Run 1 Acc: 96.59%, Time: 108.9s
+    Run 2...
+      Epoch 0/100 - Loss: 2.3876 - Time: 0.29s
+      Epoch 10/100 - Loss: 0.4842 - Time: 11.32s
+      Epoch 20/100 - Loss: 0.2552 - Time: 22.23s
+      Epoch 30/100 - Loss: 0.1695 - Time: 33.17s
+      Epoch 40/100 - Loss: 0.1126 - Time: 44.00s
+      Epoch 50/100 - Loss: 0.0781 - Time: 54.90s
+      Epoch 60/100 - Loss: 0.0552 - Time: 65.84s
+      Epoch 70/100 - Loss: 0.0391 - Time: 76.75s
+      Epoch 80/100 - Loss: 0.0275 - Time: 87.76s
+      Epoch 90/100 - Loss: 0.0191 - Time: 98.64s
+    Run 2 Acc: 97.14%, Time: 109.2s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3069 - Time: 0.31s
+      Epoch 10/100 - Loss: 0.4449 - Time: 11.25s
+      Epoch 20/100 - Loss: 0.2432 - Time: 22.55s
+      Epoch 30/100 - Loss: 0.1578 - Time: 34.38s
+      Epoch 40/100 - Loss: 0.1094 - Time: 45.35s
+      Epoch 50/100 - Loss: 0.0774 - Time: 56.24s
+      Epoch 60/100 - Loss: 0.0549 - Time: 67.22s
+      Epoch 70/100 - Loss: 0.0389 - Time: 78.21s
+      Epoch 80/100 - Loss: 0.0274 - Time: 89.15s
+      Epoch 90/100 - Loss: 0.0194 - Time: 100.23s
+    Run 3 Acc: 96.86%, Time: 111.1s
+    Run 4...
+      Epoch 0/100 - Loss: 2.3532 - Time: 0.31s
+      Epoch 10/100 - Loss: 0.5015 - Time: 11.28s
+      Epoch 20/100 - Loss: 0.2808 - Time: 22.30s
+      Epoch 30/100 - Loss: 0.1725 - Time: 33.23s
+      Epoch 40/100 - Loss: 0.1230 - Time: 44.37s
+      Epoch 50/100 - Loss: 0.0865 - Time: 55.53s
+      Epoch 60/100 - Loss: 0.0622 - Time: 66.15s
+      Epoch 70/100 - Loss: 0.0442 - Time: 76.87s
+      Epoch 80/100 - Loss: 0.0309 - Time: 87.60s
+      Epoch 90/100 - Loss: 0.0212 - Time: 98.40s
+    Run 4 Acc: 96.82%, Time: 108.9s
+    Run 5...
+      Epoch 0/100 - Loss: 2.4231 - Time: 0.31s
+      Epoch 10/100 - Loss: 0.5491 - Time: 11.06s
+      Epoch 20/100 - Loss: 0.2685 - Time: 21.87s
+      Epoch 30/100 - Loss: 0.1768 - Time: 32.73s
+      Epoch 40/100 - Loss: 0.1199 - Time: 43.67s
+      Epoch 50/100 - Loss: 0.0820 - Time: 54.67s
+      Epoch 60/100 - Loss: 0.0570 - Time: 65.54s
+      Epoch 70/100 - Loss: 0.0398 - Time: 76.53s
+      Epoch 80/100 - Loss: 0.0281 - Time: 87.46s
+      Epoch 90/100 - Loss: 0.0197 - Time: 98.36s
+    Run 5 Acc: 97.07%, Time: 109.0s
+
+======================================================================
+Experiment 7/29: High_LR
+  Config: high_lr_LeakyReLU
+
+high_lr_LeakyReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: LeakyReLU
+    Run 1...
+      Epoch 0/100 - Loss: 2.4217 - Time: 0.31s
+      Epoch 10/100 - Loss: 0.5779 - Time: 11.84s
+      Epoch 20/100 - Loss: 0.2734 - Time: 23.38s
+      Epoch 30/100 - Loss: 0.1877 - Time: 34.93s
+      Epoch 40/100 - Loss: 0.1246 - Time: 46.53s
+      Epoch 50/100 - Loss: 0.0876 - Time: 58.35s
+      Epoch 60/100 - Loss: 0.0613 - Time: 70.10s
+      Epoch 70/100 - Loss: 0.0425 - Time: 81.77s
+      Epoch 80/100 - Loss: 0.0288 - Time: 93.36s
+      Epoch 90/100 - Loss: 0.0193 - Time: 104.89s
+    Run 1 Acc: 96.57%, Time: 116.1s
+    Run 2...
+      Epoch 0/100 - Loss: 2.3874 - Time: 0.33s
+      Epoch 10/100 - Loss: 0.4758 - Time: 14.47s
+      Epoch 20/100 - Loss: 0.2544 - Time: 25.92s
+      Epoch 30/100 - Loss: 0.1683 - Time: 37.71s
+      Epoch 40/100 - Loss: 0.1164 - Time: 49.18s
+      Epoch 50/100 - Loss: 0.0825 - Time: 60.57s
+      Epoch 60/100 - Loss: 0.0585 - Time: 72.44s
+      Epoch 70/100 - Loss: 0.0414 - Time: 84.11s
+      Epoch 80/100 - Loss: 0.0291 - Time: 95.70s
+      Epoch 90/100 - Loss: 0.0202 - Time: 107.55s
+    Run 2 Acc: 97.08%, Time: 118.8s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3061 - Time: 0.31s
+      Epoch 10/100 - Loss: 0.4605 - Time: 12.09s
+      Epoch 20/100 - Loss: 0.2469 - Time: 23.72s
+      Epoch 30/100 - Loss: 0.1577 - Time: 35.10s
+      Epoch 40/100 - Loss: 0.1091 - Time: 46.48s
+      Epoch 50/100 - Loss: 0.0755 - Time: 58.13s
+      Epoch 60/100 - Loss: 0.0517 - Time: 69.48s
+      Epoch 70/100 - Loss: 0.0350 - Time: 80.81s
+      Epoch 80/100 - Loss: 0.0233 - Time: 92.14s
+      Epoch 90/100 - Loss: 0.0155 - Time: 103.67s
+    Run 3 Acc: 96.87%, Time: 114.6s
+    Run 4...
+      Epoch 0/100 - Loss: 2.3544 - Time: 0.30s
+      Epoch 10/100 - Loss: 0.4981 - Time: 11.78s
+      Epoch 20/100 - Loss: 0.2881 - Time: 23.38s
+      Epoch 30/100 - Loss: 0.1734 - Time: 34.70s
+      Epoch 40/100 - Loss: 0.1196 - Time: 46.05s
+      Epoch 50/100 - Loss: 0.0848 - Time: 57.60s
+      Epoch 60/100 - Loss: 0.0596 - Time: 68.89s
+      Epoch 70/100 - Loss: 0.0414 - Time: 80.38s
+      Epoch 80/100 - Loss: 0.0281 - Time: 91.73s
+      Epoch 90/100 - Loss: 0.0191 - Time: 103.01s
+    Run 4 Acc: 97.03%, Time: 114.1s
+    Run 5...
+      Epoch 0/100 - Loss: 2.4241 - Time: 0.35s
+      Epoch 10/100 - Loss: 0.5303 - Time: 11.72s
+      Epoch 20/100 - Loss: 0.2702 - Time: 23.11s
+      Epoch 30/100 - Loss: 0.1769 - Time: 34.82s
+      Epoch 40/100 - Loss: 0.1201 - Time: 46.17s
+      Epoch 50/100 - Loss: 0.0827 - Time: 57.49s
+      Epoch 60/100 - Loss: 0.0584 - Time: 69.17s
+      Epoch 70/100 - Loss: 0.0411 - Time: 80.58s
+      Epoch 80/100 - Loss: 0.0290 - Time: 91.96s
+      Epoch 90/100 - Loss: 0.0203 - Time: 103.55s
+    Run 5 Acc: 97.01%, Time: 114.6s
+
+======================================================================
+Experiment 8/29: High_LR
+  Config: high_lr_ELU
+
+high_lr_ELU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ELU
+    Run 1...
+      Epoch 0/100 - Loss: 2.5360 - Time: 0.42s
+      Epoch 10/100 - Loss: 0.4395 - Time: 13.41s
+      Epoch 20/100 - Loss: 0.2712 - Time: 26.56s
+      Epoch 30/100 - Loss: 0.1776 - Time: 39.50s
+      Epoch 40/100 - Loss: 0.1249 - Time: 52.47s
+      Epoch 50/100 - Loss: 0.0909 - Time: 65.46s
+      Epoch 60/100 - Loss: 0.0668 - Time: 78.46s
+      Epoch 70/100 - Loss: 0.0486 - Time: 91.72s
+      Epoch 80/100 - Loss: 0.0348 - Time: 104.60s
+      Epoch 90/100 - Loss: 0.0246 - Time: 117.54s
+    Run 1 Acc: 96.92%, Time: 130.2s
+    Run 2...
+      Epoch 0/100 - Loss: 2.4339 - Time: 0.42s
+      Epoch 10/100 - Loss: 0.4193 - Time: 13.62s
+      Epoch 20/100 - Loss: 0.2549 - Time: 27.31s
+      Epoch 30/100 - Loss: 0.1753 - Time: 40.20s
+      Epoch 40/100 - Loss: 0.1250 - Time: 53.00s
+      Epoch 50/100 - Loss: 0.0911 - Time: 65.77s
+      Epoch 60/100 - Loss: 0.0677 - Time: 78.41s
+      Epoch 70/100 - Loss: 0.0502 - Time: 91.34s
+      Epoch 80/100 - Loss: 0.0367 - Time: 103.99s
+      Epoch 90/100 - Loss: 0.0264 - Time: 116.65s
+    Run 2 Acc: 96.99%, Time: 129.1s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3189 - Time: 0.39s
+      Epoch 10/100 - Loss: 0.4010 - Time: 12.94s
+      Epoch 20/100 - Loss: 0.2500 - Time: 25.74s
+      Epoch 30/100 - Loss: 0.1702 - Time: 38.43s
+      Epoch 40/100 - Loss: 0.1212 - Time: 51.16s
+      Epoch 50/100 - Loss: 0.0886 - Time: 64.15s
+      Epoch 60/100 - Loss: 0.0644 - Time: 76.92s
+      Epoch 70/100 - Loss: 0.0466 - Time: 89.57s
+      Epoch 80/100 - Loss: 0.0333 - Time: 102.44s
+      Epoch 90/100 - Loss: 0.0235 - Time: 115.13s
+    Run 3 Acc: 97.03%, Time: 127.7s
+    Run 4...
+      Epoch 0/100 - Loss: 2.4688 - Time: 0.40s
+      Epoch 10/100 - Loss: 0.4044 - Time: 13.38s
+      Epoch 20/100 - Loss: 0.2424 - Time: 26.31s
+      Epoch 30/100 - Loss: 0.1633 - Time: 39.59s
+      Epoch 40/100 - Loss: 0.1131 - Time: 52.65s
+      Epoch 50/100 - Loss: 0.0796 - Time: 65.99s
+      Epoch 60/100 - Loss: 0.0566 - Time: 79.13s
+      Epoch 70/100 - Loss: 0.0401 - Time: 92.23s
+      Epoch 80/100 - Loss: 0.0280 - Time: 105.55s
+      Epoch 90/100 - Loss: 0.0194 - Time: 118.74s
+    Run 4 Acc: 97.08%, Time: 131.6s
+    Run 5...
+      Epoch 0/100 - Loss: 2.5154 - Time: 0.41s
+      Epoch 10/100 - Loss: 0.4342 - Time: 14.14s
+      Epoch 20/100 - Loss: 0.2685 - Time: 27.27s
+      Epoch 30/100 - Loss: 0.1840 - Time: 40.61s
+      Epoch 40/100 - Loss: 0.1302 - Time: 53.80s
+      Epoch 50/100 - Loss: 0.0954 - Time: 67.20s
+      Epoch 60/100 - Loss: 0.0707 - Time: 80.37s
+      Epoch 70/100 - Loss: 0.0523 - Time: 93.60s
+      Epoch 80/100 - Loss: 0.0384 - Time: 106.97s
+      Epoch 90/100 - Loss: 0.0279 - Time: 120.21s
+    Run 5 Acc: 96.99%, Time: 132.9s
+
+======================================================================
+Experiment 9/29: High_LR
+  Config: high_lr_Tanh
+
+high_lr_Tanh:
+  Architecture from hidden layers: [128, 64]
+  Activation: Tanh
+    Run 1...
+      Epoch 0/100 - Loss: 2.4046 - Time: 0.50s
+      Epoch 10/100 - Loss: 0.4290 - Time: 13.51s
+      Epoch 20/100 - Loss: 0.2550 - Time: 26.73s
+      Epoch 30/100 - Loss: 0.1717 - Time: 39.47s
+      Epoch 40/100 - Loss: 0.1187 - Time: 52.20s
+      Epoch 50/100 - Loss: 0.0813 - Time: 65.23s
+      Epoch 60/100 - Loss: 0.0557 - Time: 78.08s
+      Epoch 70/100 - Loss: 0.0378 - Time: 91.10s
+      Epoch 80/100 - Loss: 0.0255 - Time: 104.00s
+      Epoch 90/100 - Loss: 0.0174 - Time: 116.89s
+    Run 1 Acc: 96.50%, Time: 129.5s
+    Run 2...
+      Epoch 0/100 - Loss: 2.3884 - Time: 0.49s
+      Epoch 10/100 - Loss: 0.4122 - Time: 16.01s
+      Epoch 20/100 - Loss: 0.2422 - Time: 29.26s
+      Epoch 30/100 - Loss: 0.1634 - Time: 42.27s
+      Epoch 40/100 - Loss: 0.1143 - Time: 55.31s
+      Epoch 50/100 - Loss: 0.0799 - Time: 68.50s
+      Epoch 60/100 - Loss: 0.0554 - Time: 81.55s
+      Epoch 70/100 - Loss: 0.0383 - Time: 94.60s
+      Epoch 80/100 - Loss: 0.0262 - Time: 107.48s
+      Epoch 90/100 - Loss: 0.0179 - Time: 120.45s
+    Run 2 Acc: 96.54%, Time: 133.0s
+    Run 3...
+      Epoch 0/100 - Loss: 2.3316 - Time: 0.50s
+      Epoch 10/100 - Loss: 0.4069 - Time: 13.44s
+      Epoch 20/100 - Loss: 0.2392 - Time: 26.38s
+      Epoch 30/100 - Loss: 0.1598 - Time: 39.46s
+      Epoch 40/100 - Loss: 0.1077 - Time: 52.36s
+      Epoch 50/100 - Loss: 0.0738 - Time: 65.32s
+      Epoch 60/100 - Loss: 0.0500 - Time: 78.42s
+      Epoch 70/100 - Loss: 0.0335 - Time: 91.29s
+      Epoch 80/100 - Loss: 0.0225 - Time: 104.32s
+      Epoch 90/100 - Loss: 0.0153 - Time: 117.12s
+    Run 3 Acc: 96.67%, Time: 129.5s
+    Run 4...
+      Epoch 0/100 - Loss: 2.4334 - Time: 0.53s
+      Epoch 10/100 - Loss: 0.4201 - Time: 13.77s
+      Epoch 20/100 - Loss: 0.2403 - Time: 26.73s
+      Epoch 30/100 - Loss: 0.1607 - Time: 39.36s
+      Epoch 40/100 - Loss: 0.1088 - Time: 51.76s
+      Epoch 50/100 - Loss: 0.0743 - Time: 64.13s
+      Epoch 60/100 - Loss: 0.0504 - Time: 76.79s
+      Epoch 70/100 - Loss: 0.0335 - Time: 89.17s
+      Epoch 80/100 - Loss: 0.0222 - Time: 101.71s
+      Epoch 90/100 - Loss: 0.0150 - Time: 114.13s
+    Run 4 Acc: 96.65%, Time: 126.0s
+    Run 5...
+      Epoch 0/100 - Loss: 2.4309 - Time: 0.45s
+      Epoch 10/100 - Loss: 0.4537 - Time: 13.15s
+      Epoch 20/100 - Loss: 0.2552 - Time: 25.71s
+      Epoch 30/100 - Loss: 0.1664 - Time: 38.20s
+      Epoch 40/100 - Loss: 0.1141 - Time: 50.99s
+      Epoch 50/100 - Loss: 0.0790 - Time: 63.49s
+      Epoch 60/100 - Loss: 0.0546 - Time: 76.22s
+      Epoch 70/100 - Loss: 0.0375 - Time: 88.71s
+      Epoch 80/100 - Loss: 0.0257 - Time: 101.17s
+      Epoch 90/100 - Loss: 0.0178 - Time: 113.95s
+    Run 5 Acc: 96.51%, Time: 125.9s
+
+  Progress: 9/29 (31.0%)
+  Estimated time remaining: 197.5 minutes
+
+======================================================================
+Experiment 10/29: Fast_Convergence
+  Config: fast_convergence_ReLU
+
+fast_convergence_ReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ReLU
+    Run 1...
+      Epoch 0/30 - Loss: 2.4201 - Time: 0.32s
+      Epoch 3/30 - Loss: 2.1985 - Time: 3.53s
+      Epoch 6/30 - Loss: 1.9926 - Time: 6.84s
+      Epoch 9/30 - Loss: 1.7575 - Time: 10.09s
+      Epoch 12/30 - Loss: 1.4853 - Time: 13.52s
+      Epoch 15/30 - Loss: 1.1996 - Time: 16.87s
+      Epoch 18/30 - Loss: 0.9406 - Time: 20.07s
+      Epoch 21/30 - Loss: 0.7414 - Time: 23.29s
+      Epoch 24/30 - Loss: 0.6057 - Time: 26.48s
+      Epoch 27/30 - Loss: 0.5169 - Time: 29.68s
+    Run 1 Acc: 86.77%, Time: 32.6s
+    Run 2...
+      Epoch 0/30 - Loss: 2.3876 - Time: 0.31s
+      Epoch 3/30 - Loss: 2.1680 - Time: 3.60s
+      Epoch 6/30 - Loss: 1.9647 - Time: 6.92s
+      Epoch 9/30 - Loss: 1.7324 - Time: 10.20s
+      Epoch 12/30 - Loss: 1.4747 - Time: 13.65s
+      Epoch 15/30 - Loss: 1.2019 - Time: 16.97s
+      Epoch 18/30 - Loss: 0.9425 - Time: 20.18s
+      Epoch 21/30 - Loss: 0.7335 - Time: 23.38s
+      Epoch 24/30 - Loss: 0.5906 - Time: 26.60s
+      Epoch 27/30 - Loss: 0.4999 - Time: 29.79s
+    Run 2 Acc: 87.77%, Time: 32.7s
+    Run 3...
+      Epoch 0/30 - Loss: 2.3069 - Time: 0.29s
+      Epoch 3/30 - Loss: 2.0870 - Time: 3.59s
+      Epoch 6/30 - Loss: 1.8747 - Time: 6.88s
+      Epoch 9/30 - Loss: 1.6242 - Time: 10.16s
+      Epoch 12/30 - Loss: 1.3463 - Time: 13.63s
+      Epoch 15/30 - Loss: 1.0720 - Time: 16.94s
+      Epoch 18/30 - Loss: 0.8389 - Time: 20.14s
+      Epoch 21/30 - Loss: 0.6711 - Time: 23.32s
+      Epoch 24/30 - Loss: 0.5544 - Time: 26.56s
+      Epoch 27/30 - Loss: 0.4756 - Time: 29.76s
+    Run 3 Acc: 88.25%, Time: 32.6s
+    Run 4...
+      Epoch 0/30 - Loss: 2.3532 - Time: 0.28s
+      Epoch 3/30 - Loss: 2.1283 - Time: 3.56s
+      Epoch 6/30 - Loss: 1.9219 - Time: 6.85s
+      Epoch 9/30 - Loss: 1.6888 - Time: 10.14s
+      Epoch 12/30 - Loss: 1.4286 - Time: 13.59s
+      Epoch 15/30 - Loss: 1.1599 - Time: 16.94s
+      Epoch 18/30 - Loss: 0.9210 - Time: 20.17s
+      Epoch 21/30 - Loss: 0.7331 - Time: 23.40s
+      Epoch 24/30 - Loss: 0.6011 - Time: 26.66s
+      Epoch 27/30 - Loss: 0.5113 - Time: 29.90s
+    Run 4 Acc: 87.78%, Time: 32.8s
+    Run 5...
+      Epoch 0/30 - Loss: 2.4231 - Time: 0.30s
+      Epoch 3/30 - Loss: 2.2085 - Time: 3.56s
+      Epoch 6/30 - Loss: 2.0233 - Time: 6.82s
+      Epoch 9/30 - Loss: 1.8175 - Time: 10.15s
+      Epoch 12/30 - Loss: 1.5647 - Time: 13.63s
+      Epoch 15/30 - Loss: 1.2694 - Time: 16.91s
+      Epoch 18/30 - Loss: 0.9923 - Time: 20.19s
+      Epoch 21/30 - Loss: 0.7742 - Time: 23.43s
+      Epoch 24/30 - Loss: 0.6226 - Time: 26.70s
+      Epoch 27/30 - Loss: 0.5216 - Time: 29.96s
+    Run 5 Acc: 88.21%, Time: 32.9s
+
+======================================================================
+Experiment 11/29: Fast_Convergence
+  Config: fast_convergence_LeakyReLU
+
+fast_convergence_LeakyReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: LeakyReLU
+    Run 1...
+      Epoch 0/30 - Loss: 2.4217 - Time: 0.34s
+      Epoch 3/30 - Loss: 2.1985 - Time: 3.85s
+      Epoch 6/30 - Loss: 1.9915 - Time: 7.31s
+      Epoch 9/30 - Loss: 1.7553 - Time: 10.86s
+      Epoch 12/30 - Loss: 1.4822 - Time: 14.44s
+      Epoch 15/30 - Loss: 1.1958 - Time: 17.89s
+      Epoch 18/30 - Loss: 0.9371 - Time: 21.31s
+      Epoch 21/30 - Loss: 0.7388 - Time: 24.71s
+      Epoch 24/30 - Loss: 0.6043 - Time: 28.11s
+      Epoch 27/30 - Loss: 0.5168 - Time: 31.49s
+    Run 1 Acc: 86.65%, Time: 34.5s
+    Run 2...
+      Epoch 0/30 - Loss: 2.3874 - Time: 0.33s
+      Epoch 3/30 - Loss: 2.1666 - Time: 3.84s
+      Epoch 6/30 - Loss: 1.9621 - Time: 7.31s
+      Epoch 9/30 - Loss: 1.7285 - Time: 10.97s
+      Epoch 12/30 - Loss: 1.4693 - Time: 14.49s
+      Epoch 15/30 - Loss: 1.1957 - Time: 18.01s
+      Epoch 18/30 - Loss: 0.9366 - Time: 21.45s
+      Epoch 21/30 - Loss: 0.7292 - Time: 24.88s
+      Epoch 24/30 - Loss: 0.5880 - Time: 28.30s
+      Epoch 27/30 - Loss: 0.4985 - Time: 31.68s
+    Run 2 Acc: 87.83%, Time: 34.7s
+    Run 3...
+      Epoch 0/30 - Loss: 2.3061 - Time: 0.32s
+      Epoch 3/30 - Loss: 2.0848 - Time: 3.85s
+      Epoch 6/30 - Loss: 1.8712 - Time: 7.24s
+      Epoch 9/30 - Loss: 1.6194 - Time: 10.73s
+      Epoch 12/30 - Loss: 1.3411 - Time: 14.35s
+      Epoch 15/30 - Loss: 1.0674 - Time: 17.96s
+      Epoch 18/30 - Loss: 0.8351 - Time: 21.41s
+      Epoch 21/30 - Loss: 0.6684 - Time: 24.84s
+      Epoch 24/30 - Loss: 0.5525 - Time: 28.21s
+      Epoch 27/30 - Loss: 0.4744 - Time: 31.62s
+    Run 3 Acc: 88.19%, Time: 34.6s
+    Run 4...
+      Epoch 0/30 - Loss: 2.3544 - Time: 0.31s
+      Epoch 3/30 - Loss: 2.1275 - Time: 5.21s
+      Epoch 6/30 - Loss: 1.9198 - Time: 8.69s
+      Epoch 9/30 - Loss: 1.6855 - Time: 12.36s
+      Epoch 12/30 - Loss: 1.4245 - Time: 15.88s
+      Epoch 15/30 - Loss: 1.1557 - Time: 19.25s
+      Epoch 18/30 - Loss: 0.9176 - Time: 22.65s
+      Epoch 21/30 - Loss: 0.7308 - Time: 25.99s
+      Epoch 24/30 - Loss: 0.5999 - Time: 29.32s
+      Epoch 27/30 - Loss: 0.5112 - Time: 32.72s
+    Run 4 Acc: 87.76%, Time: 35.7s
+    Run 5...
+      Epoch 0/30 - Loss: 2.4241 - Time: 0.32s
+      Epoch 3/30 - Loss: 2.2077 - Time: 3.76s
+      Epoch 6/30 - Loss: 2.0212 - Time: 7.27s
+      Epoch 9/30 - Loss: 1.8141 - Time: 10.83s
+      Epoch 12/30 - Loss: 1.5600 - Time: 14.31s
+      Epoch 15/30 - Loss: 1.2646 - Time: 17.75s
+      Epoch 18/30 - Loss: 0.9877 - Time: 21.17s
+      Epoch 21/30 - Loss: 0.7700 - Time: 24.57s
+      Epoch 24/30 - Loss: 0.6185 - Time: 27.97s
+      Epoch 27/30 - Loss: 0.5190 - Time: 31.41s
+    Run 5 Acc: 88.18%, Time: 34.4s
+
+======================================================================
+Experiment 12/29: Fast_Convergence
+  Config: fast_convergence_ELU
+
+fast_convergence_ELU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ELU
+    Run 1...
+      Epoch 0/30 - Loss: 2.5360 - Time: 0.44s
+      Epoch 3/30 - Loss: 2.1325 - Time: 4.36s
+      Epoch 6/30 - Loss: 1.8084 - Time: 8.49s
+      Epoch 9/30 - Loss: 1.4942 - Time: 12.45s
+      Epoch 12/30 - Loss: 1.2003 - Time: 16.34s
+      Epoch 15/30 - Loss: 0.9570 - Time: 20.20s
+      Epoch 18/30 - Loss: 0.7733 - Time: 24.08s
+      Epoch 21/30 - Loss: 0.6420 - Time: 27.95s
+      Epoch 24/30 - Loss: 0.5536 - Time: 31.80s
+      Epoch 27/30 - Loss: 0.4912 - Time: 35.64s
+    Run 1 Acc: 87.27%, Time: 39.2s
+    Run 2...
+      Epoch 0/30 - Loss: 2.4339 - Time: 0.39s
+      Epoch 3/30 - Loss: 2.0618 - Time: 4.38s
+      Epoch 6/30 - Loss: 1.7331 - Time: 8.32s
+      Epoch 9/30 - Loss: 1.4143 - Time: 12.23s
+      Epoch 12/30 - Loss: 1.1352 - Time: 16.15s
+      Epoch 15/30 - Loss: 0.9058 - Time: 20.10s
+      Epoch 18/30 - Loss: 0.7317 - Time: 24.00s
+      Epoch 21/30 - Loss: 0.6085 - Time: 27.85s
+      Epoch 24/30 - Loss: 0.5227 - Time: 31.76s
+      Epoch 27/30 - Loss: 0.4632 - Time: 35.79s
+    Run 2 Acc: 88.06%, Time: 39.1s
+    Run 3...
+      Epoch 0/30 - Loss: 2.3189 - Time: 0.42s
+      Epoch 3/30 - Loss: 1.9322 - Time: 4.38s
+      Epoch 6/30 - Loss: 1.6002 - Time: 8.32s
+      Epoch 9/30 - Loss: 1.2882 - Time: 12.30s
+      Epoch 12/30 - Loss: 1.0226 - Time: 16.27s
+      Epoch 15/30 - Loss: 0.8176 - Time: 20.17s
+      Epoch 18/30 - Loss: 0.6726 - Time: 24.12s
+      Epoch 21/30 - Loss: 0.5717 - Time: 28.19s
+      Epoch 24/30 - Loss: 0.5007 - Time: 32.05s
+      Epoch 27/30 - Loss: 0.4498 - Time: 35.95s
+    Run 3 Acc: 88.35%, Time: 39.3s
+    Run 4...
+      Epoch 0/30 - Loss: 2.4688 - Time: 0.42s
+      Epoch 3/30 - Loss: 2.0694 - Time: 4.35s
+      Epoch 6/30 - Loss: 1.7424 - Time: 8.29s
+      Epoch 9/30 - Loss: 1.4303 - Time: 12.23s
+      Epoch 12/30 - Loss: 1.1508 - Time: 16.15s
+      Epoch 15/30 - Loss: 0.9255 - Time: 20.29s
+      Epoch 18/30 - Loss: 0.7557 - Time: 24.22s
+      Epoch 21/30 - Loss: 0.6341 - Time: 28.12s
+      Epoch 24/30 - Loss: 0.5476 - Time: 31.97s
+      Epoch 27/30 - Loss: 0.4859 - Time: 35.85s
+    Run 4 Acc: 87.76%, Time: 39.3s
+    Run 5...
+      Epoch 0/30 - Loss: 2.5154 - Time: 0.44s
+      Epoch 3/30 - Loss: 2.1241 - Time: 5.02s
+      Epoch 6/30 - Loss: 1.8063 - Time: 9.00s
+      Epoch 9/30 - Loss: 1.4849 - Time: 13.09s
+      Epoch 12/30 - Loss: 1.1938 - Time: 17.09s
+      Epoch 15/30 - Loss: 0.9609 - Time: 21.07s
+      Epoch 18/30 - Loss: 0.7794 - Time: 24.95s
+      Epoch 21/30 - Loss: 0.6496 - Time: 28.83s
+      Epoch 24/30 - Loss: 0.5591 - Time: 32.69s
+      Epoch 27/30 - Loss: 0.4938 - Time: 36.55s
+    Run 5 Acc: 87.91%, Time: 39.9s
+
+======================================================================
+Experiment 13/29: Fast_Convergence
+  Config: fast_convergence_Tanh
+
+fast_convergence_Tanh:
+  Architecture from hidden layers: [128, 64]
+  Activation: Tanh
+    Run 1...
+      Epoch 0/30 - Loss: 2.4046 - Time: 0.49s
+      Epoch 3/30 - Loss: 2.1210 - Time: 4.57s
+      Epoch 6/30 - Loss: 1.8649 - Time: 8.48s
+      Epoch 9/30 - Loss: 1.6078 - Time: 12.36s
+      Epoch 12/30 - Loss: 1.3665 - Time: 16.25s
+      Epoch 15/30 - Loss: 1.1630 - Time: 20.11s
+      Epoch 18/30 - Loss: 1.0015 - Time: 24.00s
+      Epoch 21/30 - Loss: 0.8732 - Time: 27.90s
+      Epoch 24/30 - Loss: 0.7688 - Time: 31.78s
+      Epoch 27/30 - Loss: 0.6842 - Time: 35.75s
+    Run 1 Acc: 86.37%, Time: 39.3s
+    Run 2...
+      Epoch 0/30 - Loss: 2.3884 - Time: 0.49s
+      Epoch 3/30 - Loss: 2.1038 - Time: 5.03s
+      Epoch 6/30 - Loss: 1.8443 - Time: 8.87s
+      Epoch 9/30 - Loss: 1.5840 - Time: 12.74s
+      Epoch 12/30 - Loss: 1.3432 - Time: 16.64s
+      Epoch 15/30 - Loss: 1.1389 - Time: 20.56s
+      Epoch 18/30 - Loss: 0.9736 - Time: 24.45s
+      Epoch 21/30 - Loss: 0.8426 - Time: 28.32s
+      Epoch 24/30 - Loss: 0.7382 - Time: 32.45s
+      Epoch 27/30 - Loss: 0.6544 - Time: 36.29s
+    Run 2 Acc: 87.76%, Time: 39.7s
+    Run 3...
+      Epoch 0/30 - Loss: 2.3316 - Time: 0.50s
+      Epoch 3/30 - Loss: 2.0203 - Time: 4.39s
+      Epoch 6/30 - Loss: 1.7431 - Time: 8.33s
+      Epoch 9/30 - Loss: 1.4762 - Time: 12.24s
+      Epoch 12/30 - Loss: 1.2408 - Time: 16.16s
+      Epoch 15/30 - Loss: 1.0487 - Time: 20.08s
+      Epoch 18/30 - Loss: 0.8976 - Time: 24.08s
+      Epoch 21/30 - Loss: 0.7807 - Time: 28.03s
+      Epoch 24/30 - Loss: 0.6896 - Time: 31.92s
+      Epoch 27/30 - Loss: 0.6170 - Time: 35.79s
+    Run 3 Acc: 87.33%, Time: 39.3s
+    Run 4...
+      Epoch 0/30 - Loss: 2.4334 - Time: 0.50s
+      Epoch 3/30 - Loss: 2.1416 - Time: 4.51s
+      Epoch 6/30 - Loss: 1.8805 - Time: 8.58s
+      Epoch 9/30 - Loss: 1.6162 - Time: 12.57s
+      Epoch 12/30 - Loss: 1.3681 - Time: 16.37s
+      Epoch 15/30 - Loss: 1.1646 - Time: 20.07s
+      Epoch 18/30 - Loss: 1.0060 - Time: 23.75s
+      Epoch 21/30 - Loss: 0.8784 - Time: 27.45s
+      Epoch 24/30 - Loss: 0.7740 - Time: 31.12s
+      Epoch 27/30 - Loss: 0.6889 - Time: 34.82s
+    Run 4 Acc: 86.60%, Time: 38.0s
+    Run 5...
+      Epoch 0/30 - Loss: 2.4309 - Time: 0.45s
+      Epoch 3/30 - Loss: 2.1328 - Time: 4.12s
+      Epoch 6/30 - Loss: 1.8703 - Time: 7.82s
+      Epoch 9/30 - Loss: 1.6050 - Time: 11.73s
+      Epoch 12/30 - Loss: 1.3599 - Time: 15.45s
+      Epoch 15/30 - Loss: 1.1604 - Time: 19.12s
+      Epoch 18/30 - Loss: 1.0046 - Time: 22.80s
+      Epoch 21/30 - Loss: 0.8812 - Time: 26.51s
+      Epoch 24/30 - Loss: 0.7800 - Time: 30.20s
+      Epoch 27/30 - Loss: 0.6959 - Time: 33.88s
+    Run 5 Acc: 86.83%, Time: 37.1s
+
+======================================================================
+Experiment 14/29: Long_Training
+  Config: long_training_ReLU
+
+long_training_ReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ReLU
+    Run 1...
+      Epoch 0/400 - Loss: 2.4201 - Time: 0.30s
+      Epoch 40/400 - Loss: 0.3437 - Time: 42.71s
+      Epoch 80/400 - Loss: 0.1833 - Time: 84.71s
+      Epoch 120/400 - Loss: 0.1124 - Time: 126.86s
+      Epoch 160/400 - Loss: 0.0737 - Time: 169.05s
+      Epoch 200/400 - Loss: 0.0485 - Time: 211.43s
+      Epoch 240/400 - Loss: 0.0317 - Time: 253.78s
+      Epoch 280/400 - Loss: 0.0209 - Time: 296.03s
+      Epoch 320/400 - Loss: 0.0139 - Time: 338.29s
+      Epoch 360/400 - Loss: 0.0094 - Time: 380.82s
+    Run 1 Acc: 96.62%, Time: 422.8s
+    Run 2...
+      Epoch 0/400 - Loss: 2.3876 - Time: 0.28s
+      Epoch 40/400 - Loss: 0.3302 - Time: 43.70s
+      Epoch 80/400 - Loss: 0.1845 - Time: 86.95s
+      Epoch 120/400 - Loss: 0.1201 - Time: 130.04s
+      Epoch 160/400 - Loss: 0.0799 - Time: 173.22s
+      Epoch 200/400 - Loss: 0.0532 - Time: 216.28s
+      Epoch 240/400 - Loss: 0.0353 - Time: 259.66s
+      Epoch 280/400 - Loss: 0.0237 - Time: 302.70s
+      Epoch 320/400 - Loss: 0.0161 - Time: 345.80s
+      Epoch 360/400 - Loss: 0.0112 - Time: 388.90s
+    Run 2 Acc: 96.82%, Time: 432.1s
+    Run 3...
+      Epoch 0/400 - Loss: 2.3069 - Time: 0.28s
+      Epoch 40/400 - Loss: 0.3219 - Time: 42.38s
+      Epoch 80/400 - Loss: 0.1744 - Time: 84.46s
+      Epoch 120/400 - Loss: 0.1102 - Time: 126.58s
+      Epoch 160/400 - Loss: 0.0706 - Time: 168.66s
+      Epoch 200/400 - Loss: 0.0449 - Time: 210.67s
+      Epoch 240/400 - Loss: 0.0281 - Time: 252.68s
+      Epoch 280/400 - Loss: 0.0178 - Time: 294.98s
+      Epoch 320/400 - Loss: 0.0116 - Time: 336.98s
+      Epoch 360/400 - Loss: 0.0078 - Time: 379.00s
+    Run 3 Acc: 96.68%, Time: 420.8s
+    Run 4...
+      Epoch 0/400 - Loss: 2.3532 - Time: 0.34s
+      Epoch 40/400 - Loss: 0.3343 - Time: 43.07s
+      Epoch 80/400 - Loss: 0.1816 - Time: 85.48s
+      Epoch 120/400 - Loss: 0.1132 - Time: 127.88s
+      Epoch 160/400 - Loss: 0.0721 - Time: 170.62s
+      Epoch 200/400 - Loss: 0.0465 - Time: 213.22s
+      Epoch 240/400 - Loss: 0.0298 - Time: 255.92s
+      Epoch 280/400 - Loss: 0.0188 - Time: 298.61s
+      Epoch 320/400 - Loss: 0.0119 - Time: 341.29s
+      Epoch 360/400 - Loss: 0.0078 - Time: 384.07s
+    Run 4 Acc: 96.81%, Time: 426.5s
+    Run 5...
+      Epoch 0/400 - Loss: 2.4231 - Time: 0.30s
+      Epoch 40/400 - Loss: 0.3412 - Time: 44.14s
+      Epoch 80/400 - Loss: 0.1886 - Time: 86.94s
+      Epoch 120/400 - Loss: 0.1188 - Time: 129.15s
+      Epoch 160/400 - Loss: 0.0765 - Time: 171.48s
+      Epoch 200/400 - Loss: 0.0497 - Time: 214.06s
+      Epoch 240/400 - Loss: 0.0323 - Time: 256.37s
+      Epoch 280/400 - Loss: 0.0213 - Time: 298.74s
+      Epoch 320/400 - Loss: 0.0142 - Time: 341.45s
+      Epoch 360/400 - Loss: 0.0098 - Time: 383.89s
+    Run 5 Acc: 96.82%, Time: 426.0s
+
+======================================================================
+Experiment 15/29: Long_Training
+  Config: long_training_LeakyReLU
+
+long_training_LeakyReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: LeakyReLU
+    Run 1...
+      Epoch 0/400 - Loss: 2.4217 - Time: 0.31s
+      Epoch 40/400 - Loss: 0.3466 - Time: 46.34s
+      Epoch 80/400 - Loss: 0.1900 - Time: 91.52s
+      Epoch 120/400 - Loss: 0.1177 - Time: 136.40s
+      Epoch 160/400 - Loss: 0.0773 - Time: 181.41s
+      Epoch 200/400 - Loss: 0.0508 - Time: 226.73s
+      Epoch 240/400 - Loss: 0.0329 - Time: 271.61s
+      Epoch 280/400 - Loss: 0.0213 - Time: 316.60s
+      Epoch 320/400 - Loss: 0.0139 - Time: 361.63s
+      Epoch 360/400 - Loss: 0.0093 - Time: 406.51s
+    Run 1 Acc: 96.80%, Time: 451.4s
+    Run 2...
+      Epoch 0/400 - Loss: 2.3874 - Time: 0.33s
+      Epoch 40/400 - Loss: 0.3305 - Time: 47.45s
+      Epoch 80/400 - Loss: 0.1857 - Time: 92.86s
+      Epoch 120/400 - Loss: 0.1213 - Time: 137.03s
+      Epoch 160/400 - Loss: 0.0810 - Time: 180.97s
+      Epoch 200/400 - Loss: 0.0542 - Time: 225.04s
+      Epoch 240/400 - Loss: 0.0360 - Time: 269.25s
+      Epoch 280/400 - Loss: 0.0240 - Time: 313.28s
+      Epoch 320/400 - Loss: 0.0163 - Time: 357.35s
+      Epoch 360/400 - Loss: 0.0113 - Time: 401.57s
+    Run 2 Acc: 96.88%, Time: 445.4s
+    Run 3...
+      Epoch 0/400 - Loss: 2.3061 - Time: 0.30s
+      Epoch 40/400 - Loss: 0.3224 - Time: 45.81s
+      Epoch 80/400 - Loss: 0.1756 - Time: 91.05s
+      Epoch 120/400 - Loss: 0.1101 - Time: 136.26s
+      Epoch 160/400 - Loss: 0.0697 - Time: 181.63s
+      Epoch 200/400 - Loss: 0.0444 - Time: 226.82s
+      Epoch 240/400 - Loss: 0.0282 - Time: 272.56s
+      Epoch 280/400 - Loss: 0.0181 - Time: 319.04s
+      Epoch 320/400 - Loss: 0.0119 - Time: 364.64s
+      Epoch 360/400 - Loss: 0.0082 - Time: 410.13s
+    Run 3 Acc: 96.83%, Time: 455.1s
+    Run 4...
+      Epoch 0/400 - Loss: 2.3544 - Time: 0.36s
+      Epoch 40/400 - Loss: 0.3358 - Time: 46.81s
+      Epoch 80/400 - Loss: 0.1826 - Time: 92.57s
+      Epoch 120/400 - Loss: 0.1138 - Time: 137.90s
+      Epoch 160/400 - Loss: 0.0728 - Time: 182.89s
+      Epoch 200/400 - Loss: 0.0469 - Time: 227.85s
+      Epoch 240/400 - Loss: 0.0298 - Time: 272.90s
+      Epoch 280/400 - Loss: 0.0187 - Time: 317.66s
+      Epoch 320/400 - Loss: 0.0118 - Time: 362.82s
+      Epoch 360/400 - Loss: 0.0078 - Time: 407.76s
+    Run 4 Acc: 96.78%, Time: 452.4s
+    Run 5...
+      Epoch 0/400 - Loss: 2.4241 - Time: 0.34s
+      Epoch 40/400 - Loss: 0.3411 - Time: 46.06s
+      Epoch 80/400 - Loss: 0.1907 - Time: 90.97s
+      Epoch 120/400 - Loss: 0.1210 - Time: 136.25s
+      Epoch 160/400 - Loss: 0.0781 - Time: 181.53s
+      Epoch 200/400 - Loss: 0.0511 - Time: 227.20s
+      Epoch 240/400 - Loss: 0.0336 - Time: 272.38s
+      Epoch 280/400 - Loss: 0.0223 - Time: 318.10s
+      Epoch 320/400 - Loss: 0.0151 - Time: 363.27s
+      Epoch 360/400 - Loss: 0.0104 - Time: 409.13s
+    Run 5 Acc: 96.82%, Time: 454.1s
+
+======================================================================
+Experiment 16/29: Long_Training
+  Config: long_training_ELU
+
+long_training_ELU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ELU
+    Run 1...
+      Epoch 0/400 - Loss: 2.5360 - Time: 0.43s
+      Epoch 40/400 - Loss: 0.3616 - Time: 52.52s
+      Epoch 80/400 - Loss: 0.2434 - Time: 103.49s
+      Epoch 120/400 - Loss: 0.1835 - Time: 153.32s
+      Epoch 160/400 - Loss: 0.1348 - Time: 203.20s
+      Epoch 200/400 - Loss: 0.1003 - Time: 253.17s
+      Epoch 240/400 - Loss: 0.0759 - Time: 303.47s
+      Epoch 280/400 - Loss: 0.0578 - Time: 353.43s
+      Epoch 320/400 - Loss: 0.0438 - Time: 403.76s
+      Epoch 360/400 - Loss: 0.0331 - Time: 453.87s
+    Run 1 Acc: 96.85%, Time: 503.7s
+    Run 2...
+      Epoch 0/400 - Loss: 2.4339 - Time: 0.40s
+      Epoch 40/400 - Loss: 0.3377 - Time: 52.62s
+      Epoch 80/400 - Loss: 0.2242 - Time: 104.09s
+      Epoch 120/400 - Loss: 0.1657 - Time: 155.53s
+      Epoch 160/400 - Loss: 0.1224 - Time: 206.62s
+      Epoch 200/400 - Loss: 0.0915 - Time: 258.18s
+      Epoch 240/400 - Loss: 0.0688 - Time: 309.52s
+      Epoch 280/400 - Loss: 0.0517 - Time: 360.72s
+      Epoch 320/400 - Loss: 0.0385 - Time: 412.01s
+      Epoch 360/400 - Loss: 0.0285 - Time: 462.95s
+    Run 2 Acc: 96.70%, Time: 513.6s
+    Run 3...
+      Epoch 0/400 - Loss: 2.3189 - Time: 0.42s
+      Epoch 40/400 - Loss: 0.3344 - Time: 52.88s
+      Epoch 80/400 - Loss: 0.2178 - Time: 104.27s
+      Epoch 120/400 - Loss: 0.1588 - Time: 155.95s
+      Epoch 160/400 - Loss: 0.1181 - Time: 207.17s
+      Epoch 200/400 - Loss: 0.0880 - Time: 258.26s
+      Epoch 240/400 - Loss: 0.0651 - Time: 309.37s
+      Epoch 280/400 - Loss: 0.0479 - Time: 360.36s
+      Epoch 320/400 - Loss: 0.0351 - Time: 411.45s
+      Epoch 360/400 - Loss: 0.0257 - Time: 462.27s
+    Run 3 Acc: 96.92%, Time: 512.7s
+    Run 4...
+      Epoch 0/400 - Loss: 2.4688 - Time: 0.38s
+      Epoch 40/400 - Loss: 0.3523 - Time: 52.35s
+      Epoch 80/400 - Loss: 0.2268 - Time: 103.19s
+      Epoch 120/400 - Loss: 0.1677 - Time: 154.18s
+      Epoch 160/400 - Loss: 0.1263 - Time: 205.50s
+      Epoch 200/400 - Loss: 0.0958 - Time: 256.72s
+      Epoch 240/400 - Loss: 0.0724 - Time: 307.68s
+      Epoch 280/400 - Loss: 0.0543 - Time: 358.96s
+      Epoch 320/400 - Loss: 0.0405 - Time: 409.87s
+      Epoch 360/400 - Loss: 0.0300 - Time: 460.26s
+    Run 4 Acc: 96.83%, Time: 510.0s
+    Run 5...
+      Epoch 0/400 - Loss: 2.5154 - Time: 0.42s
+      Epoch 40/400 - Loss: 0.3562 - Time: 52.40s
+      Epoch 80/400 - Loss: 0.2355 - Time: 103.33s
+      Epoch 120/400 - Loss: 0.1751 - Time: 154.23s
+      Epoch 160/400 - Loss: 0.1306 - Time: 205.52s
+      Epoch 200/400 - Loss: 0.0983 - Time: 256.49s
+      Epoch 240/400 - Loss: 0.0743 - Time: 307.48s
+      Epoch 280/400 - Loss: 0.0561 - Time: 358.89s
+      Epoch 320/400 - Loss: 0.0423 - Time: 410.00s
+      Epoch 360/400 - Loss: 0.0319 - Time: 461.10s
+    Run 5 Acc: 96.87%, Time: 512.0s
+
+======================================================================
+Experiment 17/29: Long_Training
+  Config: long_training_Tanh
+
+long_training_Tanh:
+  Architecture from hidden layers: [128, 64]
+  Activation: Tanh
+    Run 1...
+      Epoch 0/400 - Loss: 2.4046 - Time: 0.47s
+      Epoch 40/400 - Loss: 0.4639 - Time: 52.89s
+      Epoch 80/400 - Loss: 0.2641 - Time: 105.21s
+      Epoch 120/400 - Loss: 0.1905 - Time: 157.51s
+      Epoch 160/400 - Loss: 0.1426 - Time: 209.51s
+      Epoch 200/400 - Loss: 0.1077 - Time: 261.24s
+      Epoch 240/400 - Loss: 0.0817 - Time: 311.27s
+      Epoch 280/400 - Loss: 0.0620 - Time: 361.27s
+      Epoch 320/400 - Loss: 0.0472 - Time: 411.94s
+      Epoch 360/400 - Loss: 0.0360 - Time: 462.29s
+    Run 1 Acc: 96.82%, Time: 512.2s
+    Run 2...
+      Epoch 0/400 - Loss: 2.3884 - Time: 0.44s
+      Epoch 40/400 - Loss: 0.4369 - Time: 52.77s
+      Epoch 80/400 - Loss: 0.2503 - Time: 104.68s
+      Epoch 120/400 - Loss: 0.1820 - Time: 156.64s
+      Epoch 160/400 - Loss: 0.1363 - Time: 208.24s
+      Epoch 200/400 - Loss: 0.1025 - Time: 259.74s
+      Epoch 240/400 - Loss: 0.0769 - Time: 311.16s
+      Epoch 280/400 - Loss: 0.0575 - Time: 362.25s
+      Epoch 320/400 - Loss: 0.0430 - Time: 414.22s
+      Epoch 360/400 - Loss: 0.0324 - Time: 466.44s
+    Run 2 Acc: 96.84%, Time: 518.0s
+    Run 3...
+      Epoch 0/400 - Loss: 2.3316 - Time: 0.54s
+      Epoch 40/400 - Loss: 0.4255 - Time: 52.94s
+      Epoch 80/400 - Loss: 0.2467 - Time: 104.91s
+      Epoch 120/400 - Loss: 0.1778 - Time: 156.77s
+      Epoch 160/400 - Loss: 0.1331 - Time: 207.88s
+      Epoch 200/400 - Loss: 0.1005 - Time: 258.87s
+      Epoch 240/400 - Loss: 0.0757 - Time: 309.69s
+      Epoch 280/400 - Loss: 0.0571 - Time: 360.62s
+      Epoch 320/400 - Loss: 0.0432 - Time: 411.45s
+      Epoch 360/400 - Loss: 0.0327 - Time: 462.56s
+    Run 3 Acc: 96.78%, Time: 513.0s
+    Run 4...
+      Epoch 0/400 - Loss: 2.4334 - Time: 0.50s
+      Epoch 40/400 - Loss: 0.4647 - Time: 52.17s
+      Epoch 80/400 - Loss: 0.2622 - Time: 103.44s
+      Epoch 120/400 - Loss: 0.1898 - Time: 155.01s
+      Epoch 160/400 - Loss: 0.1434 - Time: 206.31s
+      Epoch 200/400 - Loss: 0.1097 - Time: 257.85s
+      Epoch 240/400 - Loss: 0.0841 - Time: 309.23s
+      Epoch 280/400 - Loss: 0.0640 - Time: 360.74s
+      Epoch 320/400 - Loss: 0.0484 - Time: 412.24s
+      Epoch 360/400 - Loss: 0.0366 - Time: 463.34s
+    Run 4 Acc: 96.77%, Time: 514.4s
+    Run 5...
+      Epoch 0/400 - Loss: 2.4309 - Time: 0.48s
+      Epoch 40/400 - Loss: 0.4688 - Time: 52.80s
+      Epoch 80/400 - Loss: 0.2595 - Time: 103.52s
+      Epoch 120/400 - Loss: 0.1857 - Time: 154.18s
+      Epoch 160/400 - Loss: 0.1393 - Time: 204.92s
+      Epoch 200/400 - Loss: 0.1060 - Time: 255.59s
+      Epoch 240/400 - Loss: 0.0809 - Time: 306.53s
+      Epoch 280/400 - Loss: 0.0615 - Time: 357.44s
+      Epoch 320/400 - Loss: 0.0467 - Time: 408.34s
+      Epoch 360/400 - Loss: 0.0355 - Time: 459.36s
+    Run 5 Acc: 96.82%, Time: 509.9s
+
+======================================================================
+Experiment 18/29: Small_Dataset
+  Config: small_dataset_ReLU
+  Using reduced dataset (5000 samples)
+
+small_dataset_ReLU:
+  Architecture from hidden layers: [128, 64]
+  Activation: ReLU
+    Run 1...

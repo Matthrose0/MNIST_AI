@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modell erstellen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="model">
+  <header>
+    <h1>Neues Modell erstellen</h1>
+    <nav>
+      <a href="index.html" data-nav="index">Erkennung</a>
+      <a href="model.html" data-nav="model">Modell erstellen</a>
+      <a href="stats.html" data-nav="stats">Statistik</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="panel">
+      <label>Layer-Konfiguration (z.B. 128,64,32):</label>
+      <input type="text" id="layer-config" value="64,32" />
+
+      <label>Aktivierungsfunktion:</label>
+      <select id="activation-select">
+        <option value="relu">ReLU</option>
+        <option value="sigmoid">Sigmoid</option>
+        <option value="tanh">Tanh</option>
+      </select>
+
+      <button id="train-model-btn">Modell trainieren</button>
+    </div>
+  </div>
+</body>
+</html>
