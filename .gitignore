@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+coretest.py
+claudeMain.py
+
+*.txt
+*.git
+
+
+!logs/
+!requirements.txt
+
