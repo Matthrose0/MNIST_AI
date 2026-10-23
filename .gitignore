@@ -1,7 +1,11 @@
 # Python cache
 __pycache__/
-coretest.py
-claudeMain.py
+MNIST/mnist_train.csv
+MNIST/mnist_test.csv
+fromScratch.py
+todu.doku
+fix.txt
+Procfile
 
 *.txt
 *.git

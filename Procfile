@@ -1,1 +1,0 @@
-web: python -m root.backend.server
