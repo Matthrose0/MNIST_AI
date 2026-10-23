@@ -1,16 +1,27 @@
-# Python cache
+# Python
 __pycache__/
+*.pyc
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Datasets (separat herunterladen, siehe README)
 MNIST/mnist_train.csv
 MNIST/mnist_test.csv
-fromScratch.py
-todu.doku
+
+# Lokale Notizen / Experimente
 fix.txt
+todu.doku
+fromScratch.py
+
+# Deployment (aktuell nicht genutzt)
 Procfile
 
-*.txt
-*.git
-
-
-!logs/
-!requirements.txt
-
+# Laufendes Experiment-Log (wird bei jedem Lauf ueberschrieben)
+logs/experiment_log.txt
