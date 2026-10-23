@@ -545,7 +545,9 @@ def run_experiments():
     print(f"  Total networks trained: {len(configs) * 5}")
     print("=" * 70)
 
-def test_2():
+def train_web_model():
+    # not connected to webapp
+    
     np.random.default_rng(42)
     # Load data
     print("\nLoading MNIST data...")
@@ -595,7 +597,7 @@ def test_2():
 
 if __name__ == "__main__":
     # run_experiments()
-    test_2()
+    train_web_model()
     
 
 
